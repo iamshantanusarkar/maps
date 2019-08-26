@@ -84,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'db_maps',
         'USER': 'postgres',
-        'PASSWORD': 'Pfrfkzgf1@12',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '5432',
      }
@@ -129,3 +129,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:5200",
+    "http://127.0.0.1:5200",
+    "http://localhost:5500",
+    "http://127.0.0.1:5500"
+]
+
+#CORS_URLS_REGEX = r'^/api/.*$'

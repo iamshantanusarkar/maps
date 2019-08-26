@@ -1,10 +1,6 @@
 from django.urls import path, include
-from . import views
-from rest_framework import routers
-
-router = routers.DefaultRouter()
-router.register('saved-maps', views.SavedMapView)
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('admin/', include('api.admin.urls')),
+    path('frontend/', include('api.frontend.urls'))
 ]
